@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Address Info</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f7f9fc;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+      }
+      .container {
+        background-color: #ffffff;
+        padding: 30px 40px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 400px;
+      }
+      h1 {
+        color: #333333;
+        margin-bottom: 20px;
+      }
+      .address {
+        font-size: 18px;
+        color: #555555;
+        margin-bottom: 15px;
+      }
+      .date {
+        font-size: 16px;
+        color: #777777;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" id="content"></div>
+
+    <script>
+      let addrObj = {
+        street: "abc st.",
+        city: "xyz",
+        buildingNum: 15,
+      };
+
+      function showAddr(obj) {
+        let date = new Date().toLocaleDateString("en-GB");
+        let date2 = new Date().toLocaleString();
+
+        let content = `
+          <h1>Address Info</h1>
+          <div class="address">${obj.buildingNum} ${obj.street}, ${obj.city}</div>
+          <div class="date">Registered on (toLocaleDateString): ${date}</div>
+          <div class="date">Registered on (toLocaleString): ${date2}</div>
+        `;
+
+        document.getElementById("content").innerHTML = content;
+      }
+
+      showAddr(addrObj);
+    </script>
+  </body>
+</html>
