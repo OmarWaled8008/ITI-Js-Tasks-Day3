@@ -42,16 +42,6 @@ This repository includes the JavaScript tasks completed on **Day 3**, focusing o
 - **Vanilla JavaScript (ES6+)**
 - **CSS3**
 
----
-
-## ✅ Learning Outcomes
-
-- Understanding and accessing object properties programmatically.
-- Interacting with browser windows using JavaScript.
-- Controlling movement and scrolling using intervals.
-- Practicing real-time browser manipulation and DOM updates.
-
----
 
 ## 📚 Resources
 
